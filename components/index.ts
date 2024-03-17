@@ -1,0 +1,5 @@
+export { Htag } from './Htag/Htag'
+export { Button } from './Button/Button'
+export { P } from './P/P'
+export { Tag } from './Tag/Tag'
+export { Rating } from './Rating/Rating'

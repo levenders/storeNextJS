@@ -1,0 +1,23 @@
+.star {
+  width: 20px;
+  height: 20px;
+  background-color: currentcolor;
+  mask-image: url('/star.svg');
+  display: inline-block;
+}
+
+.parent {
+  display: inline-block;
+  margin-right: 5px;
+  transition: color 0.15s;
+  color: var(--gray-light);
+}
+
+.primery {
+  transition: color 0.15s;
+  color: var(--primery);
+}
+
+.editable {
+  cursor: pointer;
+}
