@@ -37,11 +37,6 @@ function Home({ menu }: HomeProps): JSX.Element {
         hh.ru
       </Tag>
       <Tag color="primery">Работа в Photoshop</Tag>
-      <ul>
-        {menu.map((item) => (
-          <li key={item._id.secondCategory}>{item._id.secondCategory}</li>
-        ))}
-      </ul>
     </>
   )
 }
