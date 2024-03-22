@@ -52,6 +52,14 @@
   color: var(--primery);
 }
 
+.secondLevelBlock {
+  display: none;
+}
+
+.secondLevelBlockOpened {
+  display: block;
+}
+
 .secondLevelBlockOpened:last-child {
   margin-bottom: 20px;
 }
@@ -59,7 +67,7 @@
 .icon {
   width: 25px;
   height: 25px;
-  background-color: currentcolor;
+  background-color: currentColor;
   display: inline-block;
 }
 
@@ -78,6 +86,7 @@
 .box {
   mask-image: url('/box.svg');
 }
+
 .iconParent {
   display: grid;
   margin-right: 20px;

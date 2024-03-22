@@ -1,0 +1,24 @@
+.sidebar {
+  display: grid;
+  align-content: start;
+  gap: 20px;
+}
+
+.iconParent {
+  display: grid;
+  margin-right: 20px;
+  color: var(--primery);
+  align-items: center;
+}
+
+.icon {
+  margin-top: 35px;
+  width: 159px;
+  height: 42px;
+  background-color: currentColor;
+  display: inline-block;
+}
+
+.hat {
+  mask-image: url('/logo.svg');
+}
