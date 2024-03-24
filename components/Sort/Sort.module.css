@@ -1,0 +1,36 @@
+.sort {
+  display: inline-block;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 40px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.active {
+  font-weight: bold;
+  color: var(--primery);
+}
+
+.sortIcon {
+  display: none;
+  width: 20px;
+  height: 13px;
+  background-color: var(--primery);
+  mask-image: url('/sort.svg');
+}
+
+.active .sortIcon {
+  display: block;
+  margin-right: 8px;
+}
+
+.sort .wrapper:not(.active) {
+  grid-template-columns: 1fr;
+}
