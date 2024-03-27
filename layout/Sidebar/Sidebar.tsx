@@ -2,6 +2,7 @@ import { SidebarProps } from './Sidebar.props'
 import styles from './Sidebar.module.css'
 import cn from 'classnames'
 import { Menu } from '../Menu/Menu'
+import { Search } from '@/components'
 
 export const Sidebar = ({ className, ...props }: SidebarProps): JSX.Element => {
   return (
@@ -9,7 +10,7 @@ export const Sidebar = ({ className, ...props }: SidebarProps): JSX.Element => {
       <div className={styles.iconParent}>
         <span className={cn(styles.icon, styles.hat)}></span>
       </div>
-      <div>Поиск</div>
+      <Search />
       <Menu />
     </div>
   )
