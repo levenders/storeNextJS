@@ -4,6 +4,7 @@ import axios from 'axios'
 import { Button, Htag, Input, P, Rating, Tag, Textarea } from '@/components'
 import { withLayout } from '@/layout/Layout'
 import { MenuItem, PageItem } from '@/interfaceses/menu.interface'
+import { API } from '@/helpers/api'
 
 function Home({ menu }: HomeProps): JSX.Element {
   const [counter, setCounter] = useState<number>(0)
@@ -47,10 +48,9 @@ export default withLayout(Home)
 
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
   const firstCategory = 0
-  const { data: menu } = await axios.post<MenuItem[]>(
-    process.env.NEXT_PUBLIC_DOMAIN + '/api/top-page/find',
-    { firstCategory }
-  )
+  const { data: menu } = await axios.post<MenuItem[]>(API.topPage.find, {
+    firstCategory,
+  })
   return {
     props: { menu, firstCategory },
   }
