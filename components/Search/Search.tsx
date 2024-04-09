@@ -1,9 +1,10 @@
 import { SearchProps } from './Search.props'
 import styles from './Search.module.css'
 import cn from 'classnames'
-import { Button, Input } from '..'
-import { KeyboardEventHandler, useState } from 'react'
+import { Button, Input } from '@/components'
+import { useState } from 'react'
 import { useRouter } from 'next/router'
+import { KeyboardEvent } from 'react'
 
 export const Search = ({ className, ...props }: SearchProps): JSX.Element => {
   const [search, setSearch] = useState<string>('')
@@ -20,7 +21,7 @@ export const Search = ({ className, ...props }: SearchProps): JSX.Element => {
       })
   }
 
-  const handleKeyDown = (e: KeyboardEvent) => {
+  const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
     if (e.key == 'Enter') {
       toSearch()
     }
